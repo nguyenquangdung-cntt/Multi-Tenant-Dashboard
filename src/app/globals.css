@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+#menu-main > li{
+    margin-top: 20px;
+}
