@@ -16,7 +16,7 @@ export default function Navbar() {
       >
         <Menu size={24} />
       </button>
-      <h1 className="text-white text-lg font-semibold">Dashboard</h1>
+      <h1 className="text-white text-lg font-semibold">Admin</h1>
     </nav>
   );
 }

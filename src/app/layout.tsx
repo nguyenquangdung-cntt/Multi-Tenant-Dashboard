@@ -1,25 +1,11 @@
 "use client";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "..//..//public/assets/logo.png";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// export const metadata: Metadata = {
-//   title: "Multi Tenant Dashboard",
-//   description: "A dashboard for managing multiple tenants",
-// };
 
 export default function RootLayout({
   children,
@@ -29,15 +15,24 @@ export default function RootLayout({
   return (
     <Provider store={store}>
       <html lang="en">
+        <title>CMS DeliFres+</title>
         <body>
-          <nav className="p-4 bg-gray-900 text-white">
-            <Link href="/dashboard" className="mr-4">
-              Dashboard
-            </Link>
-            <Link href="/" className="mr-4">
-              Home
-            </Link>
-          </nav>
+          <div className="grid grid-cols-2 gap-4 items-center">
+            {/* Cột 1: Hình ảnh nằm ở góc trái dưới */}
+            <div className="flex justify-start">
+              <Image src={Logo} alt="DeliFres+" width={120} height={120} />
+            </div>
+
+            {/* Cột 2: Navigation */}
+            <nav className="p-4 bg-white text-black font-bold flex justify-end">
+              <Link href="/dashboard" className="mr-4">
+                Dashboard
+              </Link>
+              <Link href="/">
+                Login
+              </Link>
+            </nav>
+          </div>
           {children}
         </body>
       </html>
