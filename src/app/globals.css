@@ -3,3 +3,7 @@
 #menu-main > li{
     margin-top: 20px;
 }
+
+#menu-main > li > button{
+    padding: 10px;
+}
